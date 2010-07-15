@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Session started...</title>
+        <link rel="stylesheet" type="text/css" href="layout.css" />
+    </head>
+    <body class="bg_black">
+        <span id="box"> </span>
+        <span id="box1"> </span>
+        <span id="box2"> </span>
+        <span id="green">_</span>
+        <SCRIPT>
+            <!-- Hide from old browsers
+            setTimeout("self.document.getElementById('box').innerHTML='logged as: '",1000);
+              
+            MsgSeperator = '#';
+            CharacterPos=0;
+            MsgBuffer         = "";
+            var TypeDelay = 0;
+            var NxtMsgDelay   = 1500;
+            MsgIndex=0;
+            var MsgArray = Array("alexander#")
+            
+            function StartTyping(CharacterPos) {
+            	
+            	if (MsgArray[MsgIndex].charAt(CharacterPos) != MsgSeperator) {
+					MsgBuffer = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos)
+					self.document.getElementById("box1").innerHTML = MsgBuffer
+					
+					delay = Math.floor(Math.random() * 150)
+					CharacterPos++
+					setTimeout("StartTyping('" + CharacterPos + "')", delay)
+				} else {
+					setTimeout("TypedText()", 1500);
+				}
+            }
+            function TypedText(){
+				
+            	document.getElementById('box2').innerHTML='alexander@leonov.se\'s password: '
+			
+			}
+            // -->
+            
+            setTimeout("StartTyping(0)",1500);
+            
+			
+			
+        </SCRIPT>
+    </body>
+</html>

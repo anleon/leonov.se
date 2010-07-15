@@ -1,0 +1,54 @@
+<html>
+	<head>
+	
+
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="layout.css" />
+	</head>
+	<body>
+	
+	<FORM NAME= "testform" ACTION=" ">
+    <input type="text" NAME="msgbox" >
+  <SCRIPT>
+  <!-- Hide from old browsers
+MsgSeperator = '#';
+CharacterPos=0;
+MsgBuffer         = "";
+var TypeDelay = 50;
+var NxtMsgDelay   = 1500;
+MsgIndex=0;
+var MsgArray = Array("alexander #","Learn the gimmicks here... #","Very useful Javascript  examples  for  free at webgimmicks.com ...#")
+
+   function StartTyping(CharacterPos) {
+   if (MsgArray[MsgIndex].charAt(CharacterPos) != MsgSeperator) {
+      MsgBuffer    = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos)
+     self.document.forms[0].elements[0].value=MsgBuffer
+     delay=TypeDelay
+    }
+
+    else {
+       delay=NxtMsgDelay
+	   
+/*
+		MsgBuffer   = ""
+		
+*/
+     CharacterPos=-1
+if (MsgIndex!=MsgArray.length-1){
+      MsgIndex++
+}
+//else {MsgIndex=0 }
+
+    }
+
+    CharacterPos++
+    setTimeout("StartTyping('"+CharacterPos+"')",delay)
+  }
+
+//-->
+StartTyping(0)
+</SCRIPT>
+</div>
+
+	</body>
+</html>
