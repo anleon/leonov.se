@@ -1,40 +1,39 @@
 body {
-    background-color: black;
+	background-color: black;
 }
 
 p {
-    font-family: Courier;
-    color: white;
+	font-family: Courier;
+	color: white;
 }
 
 .green {
-    background-color: green;
-    color: green;
-	  border: none;
+	background-color: green;
+	color: green;
+	border: none;
 }
 
 .black {
-    background-color: black;
-    color: black;
-    border: none;
+	background-color: black;
+	color: black;
+	border: none;
 }
 
 .green {
-    display:none;
+	display: none;
 }
 
 body .boxes {
-    font-family: Courier;
-    color: white;
-    background-color: black;
-    border: none;
+	font-family: Courier;
+	color: white;
+	background-color: black;
+	border: none;
 }
 
 input {
 	background-color: black;
 	border: none;
 	font-family: Courier;
-  color: white;
-	width:100%;
+	color: white;
+	width: 100%;
 }
-
