@@ -11,6 +11,7 @@ p {
 	background-color: green;
 	color: green;
 	border: none;
+	display: none;
 }
 
 .black {
@@ -19,15 +20,26 @@ p {
 	border: none;
 }
 
-.green {
-	display: none;
-}
-
 body .boxes {
 	font-family: Courier;
 	color: white;
 	background-color: black;
 	border: none;
+}
+
+.center{
+  width:41em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.image{
+  width:400px;
+  display: none;
+}
+
+#text_foto{
+  width:inherit;
 }
 
 input {

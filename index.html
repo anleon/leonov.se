@@ -1,49 +1,41 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Session started...</title>
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="js/typeText.js"></script>
 <link rel="stylesheet" type="text/css" href="layout.css" />
 </head>
 <body class="bg_black">
-<span id="box"> </span>
-<span id="box1"> </span>
-<span id="box2"> </span>
-<span id="green">_</span>
-<SCRIPT>
-            <!-- Hide from old browsers
-            setTimeout("self.document.getElementById('box').innerHTML='logged as: '",1000);
-              
-            MsgSeperator = '#';
-            CharacterPos=0;
-            MsgBuffer         = "";
-            var TypeDelay = 0;
-            var NxtMsgDelay   = 1500;
-            MsgIndex=0;
-            var MsgArray = Array("alexander#")
-            
-            function StartTyping(CharacterPos) {
-            	
-            	if (MsgArray[MsgIndex].charAt(CharacterPos) != MsgSeperator) {
-					MsgBuffer = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos)
-					self.document.getElementById("box1").innerHTML = MsgBuffer
-					
-					delay = Math.floor(Math.random() * 150)
-					CharacterPos++
-					setTimeout("StartTyping('" + CharacterPos + "')", delay)
-				} else {
-					setTimeout("TypedText()", 1500);
-				}
-            }
-            function TypedText(){
-				
-            	document.getElementById('box2').innerHTML='alexander@leonov.se\'s password: '
-			
-			}
-            // -->
-            
-            setTimeout("StartTyping(0)",1500);
-            
-			
-			
-        </SCRIPT>
+<span id="box" class="boxes"></span>
+<span id="box1" class="boxes"></span>
+<span id="green1" class="green">_</span>
+<br>
+<span id="box2" class="boxes"></span>
+<span id="box3" class="boxes"></span>
+<span id="green2" class="green">_</span>
+<br>
+<div class="center">
+<pre>
+<span id="box4" class="boxes"></span>
+</pre>
+<span id="box5" class="boxes"></span>
+<span id="green3" class="green">_</span>
+</div>
+<div class="center image">
+  <img id="text_foto" src="images/text_foto.jpg" alt="picture of Alexander" />
+</div>
+<span id="box6" class="boxes"></span>
+
+<span id="box7" class="boxes"></span>
+
+<span id="box8" class="boxes"></span>
+
+<span id="box9" class="boxes"></span>
+
+<span id="box10" class="boxes"></span>
+
+<br>
+<span id="box11" class="boxes"></span>
 </body>
 </html>
