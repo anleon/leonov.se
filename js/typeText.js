@@ -29,12 +29,18 @@ $(document).ready(function() {
 						setTimeout(function() {
 							$("#green2").hide();
 							setTimeout(function() {
-								typingText("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4",false);
+								if(navigator.appName == "Microsoft Internet Explorer"){
+									$("#box4 pre").hide();
+									typingTextIE("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4 pre");
+									$("#box4 pre").fadeIn(2500);
+								}else{
+									typingText("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4 pre",false);
+								}
 								setTimeout(function() {
 									$("#green3").show();
-									typingText("Welcome to my syberworld! \=\)","#box5",true);
+									typingText("Welcome to my syberworld!","#box5",true);
 									setTimeout(function() {
-										$(".image").fadeIn(2000);
+										$(".image").fadeIn("slow");
 //										setTimeout(function() {
 //											typingText("","#box7");
 //											setTimeout(function() {
@@ -59,6 +65,16 @@ $(document).ready(function() {
 			}, 1500);
 		}, 1000);
 	}, 1000);
+	
+	function typingTextIE(text,boxNumber) {
+		if (i < text.length) {
+			$(boxNumber).append(text.charAt(i));
+			i++;
+			typingTextIE(text,boxNumber);
+		} else {
+			i = 0;
+		}
+	}
 	
 	function typingText(text,boxNumber,delayOn) {
 		if (i < text.length) {
