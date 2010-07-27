@@ -41,11 +41,3 @@ body .boxes {
 #text_foto{
   width:inherit;
 }
-
-input {
-	background-color: black;
-	border: none;
-	font-family: Courier;
-	color: white;
-	width: 100%;
-}

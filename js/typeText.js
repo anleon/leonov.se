@@ -36,13 +36,13 @@ $(document).ready(function() {
 									setTimeout(function() {
 										$(".image").fadeIn(2000);
 //										setTimeout(function() {
-//											typingText(" 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b","#box7");
+//											typingText("","#box7");
 //											setTimeout(function() {
-//												typingText(" 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888","#box8");
+//												typingText("","#box8");
 //												setTimeout(function() {
-//													typingText(" 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o","#box9");
+//													typingText("","#box9");
 //													setTimeout(function() {
-//														typingText("o888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box10");
+//														typingText("","#box10");
 //														setTimeout(function() {
 //															
 //														}, 10000);
