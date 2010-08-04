@@ -1,5 +1,7 @@
 Backlog:
 - Länkar
+  + Änkla länkar
+  - Med hover effekt
 - window.innerWidth hantering
 - window.innerHeight hantering
 - Event listener vid portrate/landskape change

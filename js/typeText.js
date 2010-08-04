@@ -44,6 +44,7 @@ $(document).ready(function() {
 									typingText("Welcome to my syberworld!","#box5",true);
 									setTimeout(function() {
 										$(".image").fadeIn("slow");
+										$(".div_links").fadeIn("slow");
 //										setTimeout(function() {
 //											typingText("","#box7");
 //											setTimeout(function() {

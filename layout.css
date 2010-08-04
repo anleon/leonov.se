@@ -1,5 +1,6 @@
 body {
 	background-color: black;
+	border: none;
 }
 
 p {
@@ -10,14 +11,12 @@ p {
 .green {
 	background-color: green;
 	color: green;
-	border: none;
 	display: none;
 }
 
 .black {
 	background-color: black;
 	color: black;
-	border: none;
 }
 
 body .boxes {
@@ -25,7 +24,6 @@ body .boxes {
 	font:100%/1.5;
 	color: white;
 	background-color: black;
-	border: none;
 }
 
 .center{
@@ -39,6 +37,17 @@ body .boxes {
   display: none;
 }
 
+.div_links{
+  width:140px;
+  display: none;
+}
+
 #text_foto{
   width:inherit;
+}
+
+.links {
+  width:32px;
+  height:32px;
+  border: none;
 }
