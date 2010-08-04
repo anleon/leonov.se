@@ -3,18 +3,23 @@
  */
 
 $(document).ready(function() {
+//	console.log(window.innerHeight);
+//	console.log(window.innerWidth);
 	var text = "";
 	var i = 0;
 	var delay = 0;
+	var delayIndex = 0;
 	var boxNumber = "";
 	var delayOn = true;
+	if(navigator.appName == "Microsoft Internet Explorer"){
+		delayIndex = 1.5;
+	}else{
+		delayIndex = 1;
+	}
 	$("#green1").show();
 //	setInterval(function() {
-//		$(".green").attr('class','black');
-//	},100);
-//	setInterval(function() {
-//		$(".black").attr('class','green');
-//	},100);
+//		$(".green").css('visibility','none').delay(1000).css('visibility','none');
+//	},2000);
 	setTimeout(function() {
 		typedText("#box","logged as: ");
 		setTimeout(function() {
@@ -30,9 +35,7 @@ $(document).ready(function() {
 							$("#green2").hide();
 							setTimeout(function() {
 								if(navigator.appName == "Microsoft Internet Explorer"){
-									$("#box4 pre").hide();
 									typingTextIE("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4 pre");
-									$("#box4 pre").fadeIn(2500);
 								}else{
 									typingText("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4 pre",false);
 								}
@@ -56,8 +59,8 @@ $(document).ready(function() {
 //												}, 10000);
 //											}, 10000);
 //										}, 10000);
-									}, 1000);
-								}, 5000);
+									}, 3000);
+								}, (5100 * delayIndex));
 							}, 500);
 						}, 1500);
 					}, 1000);
@@ -68,9 +71,12 @@ $(document).ready(function() {
 	
 	function typingTextIE(text,boxNumber) {
 		if (i < text.length) {
+			delay = 0;
 			$(boxNumber).append(text.charAt(i));
 			i++;
-			typingTextIE(text,boxNumber);
+			setTimeout(function() {
+				typingTextIE(text,boxNumber);
+			}, delay);
 		} else {
 			i = 0;
 		}
