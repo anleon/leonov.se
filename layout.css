@@ -6,7 +6,6 @@
 
 body {
 	background-color: black;
-	border: none;
 }
 
 p {
@@ -32,6 +31,10 @@ body .boxes {
 	background-color: black;
 }
 
+pre{
+  margin: 10px 0px;
+}
+
 .center{
   width:41em;
   margin-left:auto;
@@ -44,8 +47,7 @@ body .boxes {
 }
 
 .div_links{
-  width:140px;
-  height:40px;
+  width:128px;
   display: none;
 }
 
@@ -53,17 +55,10 @@ body .boxes {
   width:inherit;
 }
 
-a.links {
-  border: none;
-  padding:0px;
-}
-
 div.links {
   float:left;
   width:32px;
   height:32px;
-  border: none;
-  padding:0px;
 }
 
 #twitter{
