@@ -14,7 +14,7 @@ $(document).ready(function() {
 	if(navigator.appName == "Microsoft Internet Explorer"){
 		delayIndex = 1.5;
 	}else{
-		delayIndex = 1;
+		delayIndex = 1.1;
 	}
 	$("#green1").show();
 //	setInterval(function() {
