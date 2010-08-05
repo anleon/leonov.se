@@ -3,18 +3,28 @@
  */
 
 $(document).ready(function() {
-//	console.log(window.innerHeight);
-//	console.log(window.innerWidth);
+//	console.log($(".image #text_foto").height());
+//	console.log(window);
+//	console.log(document.documentElement.clientHeight);
+//	console.log(document.documentElement.clientWidth);
 	var text = "";
 	var i = 0;
 	var delay = 0;
 	var delayIndex = 0;
 	var boxNumber = "";
 	var delayOn = true;
+	var height = 0;
+	var width = 0;
+	var imgHeight = 0;
+	var imgWidth = 0;
 	if(navigator.appName == "Microsoft Internet Explorer"){
 		delayIndex = 1.5;
+		height = document.documentElement.clientHeight;
+		width = document.documentElement.clientWidth;
 	}else{
 		delayIndex = 1.1;
+		height = window.innerHeight;
+		width = window.innerWidth;
 	}
 	$("#green1").show();
 //	setInterval(function() {
@@ -34,16 +44,20 @@ $(document).ready(function() {
 						setTimeout(function() {
 							$("#green2").hide();
 							setTimeout(function() {
-								if(navigator.appName == "Microsoft Internet Explorer"){
-									typingTextIE("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4 pre");
-								}else{
 									typingText("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4 pre",false);
-								}
 								setTimeout(function() {
 									$("#green3").show();
 									typingText("Welcome to my syberworld!","#box5",true);
 									setTimeout(function() {
-										$(".image").fadeIn("slow");
+										if(height >= 440 && height <= 885){
+//											console.log($(".image #text_foto").height());
+											imgHeight = height - 255;
+											imgWidth = imgHeight * (494/668);
+											$(".image, .image #text_foto").height(imgHeight).width(imgWidth);
+											$(".image").fadeIn("slow");
+										}else if(height > 885){
+											$(".image").fadeIn("slow");
+										}
 										$(".div_links").fadeIn("slow");
 //										setTimeout(function() {
 //											typingText("","#box7");

@@ -42,17 +42,13 @@ pre{
 }
 
 .image{
-  width:400px;
   display: none;
+  max-width:494px;
 }
 
 .div_links{
   width:128px;
   display: none;
-}
-
-#text_foto{
-  width:inherit;
 }
 
 div.links {
