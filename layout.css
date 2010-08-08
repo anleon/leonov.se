@@ -48,7 +48,7 @@ pre{
 
 .div_links{
   width:128px;
-  display: none;
+  visibility:hidden;
 }
 
 div.links {
@@ -58,33 +58,33 @@ div.links {
 }
 
 #twitter{
-  background: url('images/links.png') no-repeat 0 0;
+  background: url('images/links.png') no-repeat 0 0 transparent;
 }
 
 #twitter:hover{
-  background: url('images/links.png') no-repeat -32px 0;
+  background: url('images/links.png') no-repeat -32px 0 transparent;
 }
 
 #linkedin{
-  background: url('images/links.png') no-repeat -64px 0;
+  background: url('images/links.png') no-repeat -64px 0 transparent;
 }
 
 #linkedin:hover{
-  background: url('images/links.png') no-repeat -96px 0;
+  background: url('images/links.png') no-repeat -96px 0 transparent;
 }
 
 #endorse{
-  background: url('images/links.png') no-repeat -128px 0;
+  background: url('images/links.png') no-repeat -128px 0 transparent;
 }
 
 #endorse:hover{
-  background: url('images/links.png') no-repeat -160px 0;
+  background: url('images/links.png') no-repeat -160px 0 transparent;
 }
 
 #facebook{
-  background: url('images/links.png') no-repeat -192px 0;
+  background: url('images/links.png') no-repeat -192px 0 transparent;
 }
 
 #facebook:hover{
-  background: url('images/links.png') no-repeat -224px 0;
+  background: url('images/links.png') no-repeat -224px 0 transparent;
 }

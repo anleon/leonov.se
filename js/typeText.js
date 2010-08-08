@@ -58,6 +58,7 @@ $(document).ready(function() {
 										}else if(height > 885){
 											$(".image").fadeIn("slow");
 										}
+										$(".div_links").hide().css("visibility", "visible");
 										setTimeout(function() {
 											$(".div_links").fadeIn("slow");
 //											setTimeout(function() {
