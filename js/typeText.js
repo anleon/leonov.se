@@ -58,9 +58,8 @@ $(document).ready(function() {
 										}else if(height > 885){
 											$(".image").fadeIn("slow");
 										}
-										$(".div_links").fadeIn("slow");
-//										setTimeout(function() {
-//											typingText("","#box7");
+										setTimeout(function() {
+											$(".div_links").fadeIn("slow");
 //											setTimeout(function() {
 //												typingText("","#box8");
 //												setTimeout(function() {
@@ -73,7 +72,7 @@ $(document).ready(function() {
 //													}, 10000);
 //												}, 10000);
 //											}, 10000);
-//										}, 10000);
+										}, 100);
 									}, 3000);
 								}, (5100 * delayIndex));
 							}, 500);
