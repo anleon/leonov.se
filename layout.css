@@ -58,33 +58,33 @@ div.links {
 }
 
 #twitter{
-  background: url('images/twitter_gray.png') no-repeat;
+  background: url('images/links.png') no-repeat 0 0;
 }
 
 #twitter:hover{
-  background: url('images/twitter.png') no-repeat;
+  background: url('images/links.png') no-repeat -32px 0;
 }
 
 #linkedin{
-  background: url('images/linkedin_gray.png') no-repeat;
+  background: url('images/links.png') no-repeat -64px 0;
 }
 
 #linkedin:hover{
-  background: url('images/linkedin.png') no-repeat;
+  background: url('images/links.png') no-repeat -96px 0;
 }
 
 #endorse{
-  background: url('images/endorse_gray.png') no-repeat;
+  background: url('images/links.png') no-repeat -128px 0;
 }
 
 #endorse:hover{
-  background: url('images/endorse.png') no-repeat;
+  background: url('images/links.png') no-repeat -160px 0;
 }
 
 #facebook{
-  background: url('images/facebook_gray.png') no-repeat;
+  background: url('images/links.png') no-repeat -192px 0;
 }
 
 #facebook:hover{
-  background: url('images/facebook.png') no-repeat;
+  background: url('images/links.png') no-repeat -224px 0;
 }
