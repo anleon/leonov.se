@@ -58,9 +58,9 @@ $(document).ready(function() {
 										}else if(height > 885){
 											$(".image").fadeIn("slow");
 										}
-										$(".div_links").hide().css("visibility", "visible");
-										setTimeout(function() {
-											$(".div_links").fadeIn("slow");
+										$(".div_links").hide().css("visibility", "visible").fadeIn("slow");
+//										setTimeout(function() {
+//											$(".div_links");
 //											setTimeout(function() {
 //												typingText("","#box8");
 //												setTimeout(function() {
@@ -73,7 +73,7 @@ $(document).ready(function() {
 //													}, 10000);
 //												}, 10000);
 //											}, 10000);
-										}, 100);
+//										}, 100);
 									}, 3000);
 								}, (5100 * delayIndex));
 							}, 500);
