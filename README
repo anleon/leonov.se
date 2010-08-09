@@ -3,6 +3,6 @@ Backlog:
   + Änkla länkar
   + Med hover effekt
 - window.innerWidth hantering
-- window.innerHeight hantering
++ window.innerHeight hantering
 - Skip intro knappen
 - Event listener vid portrate/landskape change
