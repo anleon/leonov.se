@@ -8,10 +8,10 @@ $(document).ready(function() {
 //	console.log(document.documentElement.clientHeight);
 //	console.log(document.documentElement.clientWidth);
 	var text = "";
+	var boxNumber = "";
 	var i = 0;
 	var delay = 0;
 	var delayIndex = 0;
-	var boxNumber = "";
 	var delayOn = true;
 	var height = 0;
 	var width = 0;
@@ -47,7 +47,7 @@ $(document).ready(function() {
 									typingText("oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'","#box4 pre",false);
 								setTimeout(function() {
 									$("#green3").show();
-									typingText("Welcome to my syberworld!","#box5",true);
+									typingText("Welcome to my cyberworld!","#box5",true);
 									setTimeout(function() {
 										if(height >= 440 && height <= 885){
 //											console.log($(".image #text_foto").height());
@@ -83,19 +83,6 @@ $(document).ready(function() {
 			}, 1500);
 		}, 1000);
 	}, 1000);
-	
-	function typingTextIE(text,boxNumber) {
-		if (i < text.length) {
-			delay = 0;
-			$(boxNumber).append(text.charAt(i));
-			i++;
-			setTimeout(function() {
-				typingTextIE(text,boxNumber);
-			}, delay);
-		} else {
-			i = 0;
-		}
-	}
 	
 	function typingText(text,boxNumber,delayOn) {
 		if (i < text.length) {
