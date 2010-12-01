@@ -59,6 +59,7 @@ $(document).ready(function() {
 											$(".image").fadeIn("slow");
 										}
 										$(".div_links").hide().css("visibility", "visible").fadeIn("slow");
+										blinker($("#green3"));
 //										setTimeout(function() {
 //											$(".div_links");
 //											setTimeout(function() {
@@ -104,5 +105,15 @@ $(document).ready(function() {
 	
 	function typedText(tag,text) {
 		$(tag).html(text);
+	}
+	
+	function blinker(span) {
+		span.show();
+		setTimeout(function() {
+			span.hide();
+			setTimeout(function() {
+				blinker(span);
+			}, 1000);
+		}, 1000);
 	}
 });
