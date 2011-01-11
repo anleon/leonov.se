@@ -31,14 +31,14 @@ $(document).ready(function() {
 //		$(".green").css('visibility','none').delay(1000).css('visibility','none');
 //	},2000);
 	setTimeout(function() {
-		typedText("#box","logged as: ");
+		typedText("logged as: ","#box");
 		setTimeout(function() {
 			typingText("alexander","#box1",true);
 			setTimeout(function() {
 				$("#green1").hide();
 				$("#green2").show();
 				setTimeout(function() {
-					typedText("#box2","alexander@leonov.se\'s password: ");
+					typedText("alexander@leonov.se\'s password: ","#box2");
 					setTimeout(function() {
 						typingText("*********","#box3",true);
 						setTimeout(function() {
@@ -103,16 +103,16 @@ $(document).ready(function() {
 		}
 	}
 	
-	function typedText(tag,text) {
+	function typedText(text,tag) {
 		$(tag).html(text);
 	}
 	
-	function blinker(span) {
-		span.show();
+	function blinker(tag) {
+		tag.show();
 		setTimeout(function() {
-			span.hide();
+			tag.hide();
 			setTimeout(function() {
-				blinker(span);
+				blinker(tag);
 			}, 1000);
 		}, 1000);
 	}

@@ -3,7 +3,10 @@
  */
 
 $(document).ready(function() {
-	var jsConveyor = Array();
+
+	var conveyorBand = Array();
+	conveyorBand[0] = Array();
+
 	function typingText(text,boxNumber,delayOn) {
 		if (i < text.length) {
 			if(delayOn == true){
