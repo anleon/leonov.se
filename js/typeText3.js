@@ -3,10 +3,26 @@
  */
 
 $(document).ready(function() {
-
+	var n = 0;
 	var conveyorBand = Array();
 	conveyorBand[0] = Array();
-
+	
+	function conveyor(conveyorBand,n) {
+		if(conveyorBand[n] == "tag"){
+			
+			n++;
+		}else if(conveyorBand[n] == "typedText"){
+			
+			n++;
+		}else if(conveyorBand[n] == "typingText"){
+			
+			n++;
+		}else{
+			
+			n++;
+		}
+	}
+	
 	function typingText(text,boxNumber,delayOn) {
 		if (i < text.length) {
 			if(delayOn == true){
