@@ -22,14 +22,11 @@ $(document).ready(function() {
 		height = document.documentElement.clientHeight;
 		width = document.documentElement.clientWidth;
 	}else{
-		delayIndex = 1.1;
+		delayIndex = 1.3;
 		height = window.innerHeight;
 		width = window.innerWidth;
 	}
 	$("#green1").show();
-//	setInterval(function() {
-//		$(".green").css('visibility','none').delay(1000).css('visibility','none');
-//	},2000);
 	setTimeout(function() {
 		typedText("logged as: ","#box");
 		setTimeout(function() {
@@ -60,23 +57,8 @@ $(document).ready(function() {
 										}
 										$(".div_links").hide().css("visibility", "visible").fadeIn("slow");
 										blinker($("#green3"));
-//										setTimeout(function() {
-//											$(".div_links");
-//											setTimeout(function() {
-//												typingText("","#box8");
-//												setTimeout(function() {
-//													typingText("","#box9");
-//													setTimeout(function() {
-//														typingText("","#box10");
-//														setTimeout(function() {
-//															
-//														}, 10000);
-//													}, 10000);
-//												}, 10000);
-//											}, 10000);
-//										}, 100);
 									}, 3000);
-								}, (5100 * delayIndex));
+								}, (5600 * delayIndex));
 							}, 500);
 						}, 1500);
 					}, 1000);
