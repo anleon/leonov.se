@@ -46,13 +46,12 @@ $(document).ready(function() {
 									$("#green3").show();
 									typingText("Welcome to my cyberworld!","#box5",true);
 									setTimeout(function() {
-										if(height >= 440 && height <= 885){
+										if(height >= 440){
 //											console.log($(".image #text_foto").height());
+											
 											imgHeight = height - 255;
 											imgWidth = imgHeight * (494/668);
 											$(".image, .image #text_foto").height(imgHeight).width(imgWidth);
-											$(".image").fadeIn("slow");
-										}else if(height > 885){
 											$(".image").fadeIn("slow");
 										}
 										$(".div_links").hide().css("visibility", "visible").fadeIn("slow");
