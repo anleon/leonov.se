@@ -40,8 +40,6 @@ $(document).ready(function() {
 	function conveyor(conveyorBand,n) {
 //		console.log(conveyorBand.length);
 		if(n < conveyorBand.length){
-			
-		
 			if(conveyorBand[n][0] == "tag"){
 				
 //				console.log(conveyorBand[n][0]);
