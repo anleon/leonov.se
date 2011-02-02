@@ -23,7 +23,7 @@ $(document).ready(function() {
 	conveyorBand[5] = new Array('typedText','#box2','alexander@leonov.se\'s password: ',1000);
 	conveyorBand[6] = new Array('typingText','#box3','*********',true,1500);
 	conveyorBand[7] = new Array('tag','#green2',false,500);
-	conveyorBand[8] = new Array("typingText","#box4 pre","oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'",false,5100);
+	conveyorBand[8] = new Array("typingText","#box4 pre","oooo\n\`888\n 888   .ooooo.   .ooooo.  ooo. .oo.    .ooooo.  oooo    ooo      .oooo.o  .ooooo. \n 888  d88\' \`88b d88\' \`88b \`888P\"Y88b  d88\' \`88b  \`88.  .8\'      d88\(  \"8 d88\' \`88b\n 888  888ooo888 888   888  888   888  888   888   \`88..8\'       \`\"Y88b.  888ooo888\n 888  888    .o 888   888  888   888  888   888    \`888\'   .o.  o.  \)88b 888    .o\no888o \`Y8bod8P\' \`Y8bod8P\' o888o o888o \`Y8bod8P\'     \`8\'    Y8P  8\"\"888P\' \`Y8bod8P\'",false,3300);
 	conveyorBand[9] = new Array('tag','#green3',true,1000);
 	conveyorBand[10] = new Array('typingText','#box5','Welcome to my cyberworld!',true,0);
 	
@@ -62,7 +62,9 @@ $(document).ready(function() {
 				},conveyorBand[n][3]);
 			}else if(conveyorBand[n][0] == "typingText"){
 //				console.log(conveyorBand[n][0]);
-				typingText(conveyorBand[n][1],conveyorBand[n][2],conveyorBand[n][3]);
+				if(i == 0){
+					typingText(conveyorBand[n][1],conveyorBand[n][2],conveyorBand[n][3]);					
+				}
 				setTimeout(function(){
 					n++;
 					conveyor(conveyorBand,n);
