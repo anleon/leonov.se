@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function timeIt()
+			{
+				var start = new Date();
+				alert("Click OK as fast as you can.");
+				var end = new Date();
+				
+				var difference = end.getTime() - start.getTime();
+				
+				alert("It took you " + difference + " milliseconds to click OK!");
+			}
+</script>
+	</head>
+	<body>
+		<form>
+			<input type="button" onclick="timeIt();" value="Start">
+		</form>
+	</body>
+</html>

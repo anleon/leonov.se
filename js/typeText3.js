@@ -6,6 +6,7 @@ $(document).ready(function() {
 	var text = "";
 	var boxNumber = "";
 	var i = 0;
+	var j = 0;
 	var delay = 0;
 	var delayIndex = 0;
 	var delayOn = true;
@@ -14,6 +15,10 @@ $(document).ready(function() {
 	var imgHeight = 0;
 	var imgWidth = 0;
 	var n = 0;
+	var startTime = 0;
+	var endTime = 0;
+	var totalDelay = 0;
+	var timeDifference = 0;
 	var conveyorBand = new Array();
 	conveyorBand[0] = ['tag','#green1',true,1000];
 	conveyorBand[1] = ['typedText','#box','logged as: ',1000];
@@ -47,6 +52,7 @@ $(document).ready(function() {
 				if(conveyorBand[n][2] == true){
 					$(conveyorBand[n][1]).show();
 				}else{
+					
 					$(conveyorBand[n][1]).hide();
 				}
 				setTimeout(function(){
@@ -58,11 +64,17 @@ $(document).ready(function() {
 				typedText(conveyorBand[n][1],conveyorBand[n][2]);
 				setTimeout(function(){
 					n++;
+					
 					conveyor(conveyorBand,n);
 				},conveyorBand[n][3]);
 			}else if(conveyorBand[n][0] == "typingText"){
-//				console.log(conveyorBand[n][0]);
+				if(j == 0){
+//					var startTime = 0;
+					startTime = new Date();
+					j++;
+				}
 				typingText(conveyorBand[n][1],conveyorBand[n][2],conveyorBand[n][3]);
+				
 				setTimeout(function(){
 					n++;
 					conveyor(conveyorBand,n);
@@ -87,16 +99,31 @@ $(document).ready(function() {
 		if (i < text.length) {
 			if(delayOn == true){
 				delay = Math.floor(Math.random() * 200);
+				totalDelay += delay;
+//				console.log(totalDelay);
 			}else{
 				delay = 0;
+				
 			}
+			
 			//console.log(delayOn);
 			$(boxNumber).append(text.charAt(i));
 			i++;
+			
 			setTimeout(function() {
 				typingText(boxNumber,text,delayOn);
 			}, delay);
 		} else {
+			if(j == 1 && i == text.length){
+//				var endTime = 0;
+				endTime = new Date();
+				j++;
+				console.log(totalDelay);
+				console.log(endTime.getTime());
+				console.log(startTime.getTime());
+				console.log(endTime.getTime()-startTime.getTime());
+				console.log((((endTime.getTime()-startTime.getTime())-totalDelay))*465);
+			}
 			i = 0;
 		}
 	}
